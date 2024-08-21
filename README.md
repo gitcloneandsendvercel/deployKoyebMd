@@ -36,7 +36,7 @@
 
 <br>
 
-[![FORK PRABATH-MD](https://img.shields.io/badge/FORK%20-PRABATH%20MD-white)](https://gitlab.com/prabathLK/PRABATH-MD/fork)
+[![FORK PRABATH-MD](https://img.shields.io/badge/FORK%20-PRABATH%20MD-white)](https://gitlab.com/prabathLK/prabath-md/-/forks/new)
 
  ---
  

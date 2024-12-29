@@ -30,7 +30,7 @@ SESSION_ID = envv2.SESSION_ID
 
 
 
-moduule.exports = {
+module.exports = {
     SESSION_ID: SESSION_ID,    
     BOT_NUMBER:  BOT_NUMBER,
     GITHUB_USERNAME: username,

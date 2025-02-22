@@ -1,6 +1,6 @@
 {
     "name": "MDWABOT",
-    "version": "2.1.5",
+    "version": "2.1.6",
     "description": "P-MD is a Powerful Whatsapp bot.  👨‍💻❤️",
     "main": "start.js",
     "scripts": {

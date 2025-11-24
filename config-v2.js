@@ -6,12 +6,10 @@ const SESSION_ID = "" // ඔයාගෙ session id එක මේකෙන් �
 // ඉහත ඒව "" මැදට එකතු කරන්න වෙනත් කිසිම දෙයක් වෙනස් නොකරන්න ❌. (Add "" in the middle of the above and ❌ don't change anything else.)
 
 
-
-
-
 const GITHUB_AUTH_TOKEN = DATABASE
-module.exports = {
-GITHUB_AUTH_TOKEN,
-BOT_NUMBER,
-SESSION_ID
-}
+
+export default {
+    GITHUB_AUTH_TOKEN,
+    BOT_NUMBER,
+    SESSION_ID
+};

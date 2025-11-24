@@ -1,23 +1,18 @@
-let rf = process.env.AUTH_PATH || "auth_info_baileys";
-const envv2 = require('./config-v2');
-const axios = require('axios');
-const fs = require('fs');
-const { exec } = require('child_process');
+import fs from 'fs';
+import dotenv from 'dotenv';
+import envv2 from './config-v2.js';
 
-if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
-
-function convertToBool(text, fault = 'true') {
-    return text === fault ? true : false;
+const configEnvExists = fs.existsSync('config.env');
+if (configEnvExists) {
+    dotenv.config({ path: './config.env' });
 }
 
-
+let rf = process.env.AUTH_PATH || "auth_info_baileys";
 let username = 'unknown_user';
+
 try {
     username = fs.readFileSync(`${rf}-github_username.txt`, 'utf8').trim();
-} catch (err) {
-    console.warn(`[WARN] Failed to read ${rf}-github_username.txt: ${err.message}`);
-}
-
+} catch (err) { }
 
 const GITHUB_TOKEN =
     process.env.GITHUB_AUTH_TOKEN ||
@@ -38,7 +33,7 @@ const GITHUB_TOKEN =
 const BOT_NUMBER = process.env.BOT_NUMBER || envv2.BOT_NUMBER;
 const SESSION_ID = process.env.SESSION_ID || envv2.SESSION_ID;
 
-module.exports = {
+export default {
     SESSION_ID,
     BOT_NUMBER,
     GITHUB_USERNAME: username,
